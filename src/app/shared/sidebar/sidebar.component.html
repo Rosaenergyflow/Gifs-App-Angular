@@ -1,14 +1,16 @@
- <!-- Este es el sidebar -->
-  <div class="bg-dark border-right p-3" id="sidebar">
-    <h3 class="text-light">Gifs-App</h3>
+<!-- Este es el sidebar -->
+<div class="bg-dark border-right p-3" id="sidebar">
+  <h3 class="text-light">Gifs-App</h3>
 
-    <hr class="text-white">
-    
-    <div class="list-group list-reset">
-      <a href="#"
-      class="list-group-item list-reset-item">
-        Dashboard
-      </a>
-    </div>
+  <hr class="text-white">
+
+  <div class="list-group list-reset">
+    <a  *ngFor="let item of historial" 
+        (click)="buscar( item )"
+        href="#" 
+        class="list-group-item list-reset-item">
+      {{item | titlecase}}
+    </a>
   </div>
-  <!-- End sidebar -->
+</div>
+<!-- End sidebar -->
